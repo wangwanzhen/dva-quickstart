@@ -1,0 +1,24 @@
+{
+	"entry":"src/index.js",
+	"disableCSSModules":false,
+	"disableCSSSourceMap":true,
+	"publicPath":"/",
+	"theme":"./src/utils/theme.js",
+	"extraBabelPlugins": [
+		["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
+	],
+	"proxy":{
+		"/api": {
+			"target": "https://ksh-api.yaomaitong.net/",
+			"changeOrigin": true,
+			"pathRewrite": { "^/api" : "" }
+		}
+	},
+	"html":{
+    "template":"src/index.ejs"
+  },
+  "hash":true,
+  "manifest": {
+	  "basePath": "/"
+	}
+}
